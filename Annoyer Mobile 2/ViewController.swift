@@ -12,6 +12,8 @@ import AVFoundation
 class ViewController: UITableViewController {
 
     var tonePlayer: AVAudioPlayer!
+    var tone: AVTonePlayerUnit!
+    var engine: AVAudioEngine!
     var synthesizer = AVSpeechSynthesizer()
     var crazySynth:AVSpeechSynthesizer!
     let notification = NotificationCenter.default
@@ -22,6 +24,9 @@ class ViewController: UITableViewController {
     
     @IBOutlet weak var armSwitch: UISwitch!
     @IBOutlet weak var freqSelector: UISegmentedControl!
+    @IBOutlet weak var freqSlider: UISlider!
+    @IBOutlet weak var freqLabel: UILabel!
+    @IBOutlet weak var freqButtonLabel: UILabel!
     
     var voice: AVSpeechSynthesisVoice = AVSpeechSynthesisVoice(language: "en-US")! {
         didSet {
@@ -82,15 +87,21 @@ class ViewController: UITableViewController {
         notification.post(name: Notification.Name("StopSounds_2"), object: nil)
     }
     @objc func stopAllSounds() {
-        if let soundplayer = tonePlayer {
-            if soundplayer.isPlaying {
-                soundplayer.stop()
-            }
+        if tone.isPlaying {
+            engine.mainMixerNode.volume = 0.0
+            tone.stop()
+            engine.reset()
+            freqButtonLabel.text = "Play Frequency"
         }
         
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
         }
+    }
+    @IBAction func freqSlider_valueChanged(_ sender: Any) {
+        freqLabel.text = "\(Int(freqSlider.value))hz"
+        
+        tone.frequency = Double(Int(freqSlider.value))
     }
     
     
@@ -101,6 +112,20 @@ class ViewController: UITableViewController {
         print(AVSpeechSynthesisVoice.speechVoices())
         navigationController?.navigationBar.prefersLargeTitles = true
         notification.addObserver(self, selector: #selector(self.stopAllSounds), name: Notification.Name("StopSounds_1"), object: nil)
+        
+        // Tone player setup
+        tone = AVTonePlayerUnit()
+        let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
+        print(format?.sampleRate ?? "format nil")
+        engine = AVAudioEngine()
+        engine.attach(tone)
+        let mixer = engine.mainMixerNode
+        engine.connect(tone, to: mixer, format: format)
+        do {
+            try engine.start()
+        } catch let error as NSError {
+            print(error)
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -138,25 +163,16 @@ class ViewController: UITableViewController {
         
         if (indexPath.section == 3 && indexPath.row == 0) {
             if (armSwitch.isOn) {
-                switch freqSelector.selectedSegmentIndex {
-                case 0:
-                    if (!playSound(file: "1000hz.wav")) {
-                        print("Error playing sound.")
-                    }
-                case 1:
-                    if (!playSound(file: "5000hz.wav")) {
-                        print("Error playing sound.")
-                    }
-                case 2:
-                    if (!playSound(file: "10000hz.wav")) {
-                        print("Error playing sound.")
-                    }
-                case 3:
-                    if (!playSound(file: "15000hz.wav")) {
-                        print("Error playing sound.")
-                    }
-                default:
-                    print("error")
+                if tone.isPlaying {
+                    engine.mainMixerNode.volume = 0.0
+                    tone.stop()
+                    engine.reset()
+                    freqButtonLabel.text = "Play Frequency"
+                } else {
+                    tone.preparePlaying()
+                    tone.play()
+                    engine.mainMixerNode.volume = 1.0
+                    freqButtonLabel.text = "Stop"
                 }
             } else {
                 //Not armed

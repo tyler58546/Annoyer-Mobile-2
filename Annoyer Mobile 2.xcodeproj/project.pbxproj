@@ -25,6 +25,8 @@
 		2FC2EC3720F96DC500A446DC /* ebs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FC2EC2B20F96DC500A446DC /* ebs.mp3 */; };
 		2FC2EC3820F96DC500A446DC /* dialup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FC2EC2C20F96DC500A446DC /* dialup.mp3 */; };
 		2FC2EC3A20FACDB900A446DC /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EC3920FACDB900A446DC /* LaunchScreen.swift */; };
+		2FC2EC3C20FAED4500A446DC /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EC3B20FAED4500A446DC /* AboutTableViewController.swift */; };
+		2FC2EC3E20FBA82E00A446DC /* AVTonePlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EC3D20FBA82E00A446DC /* AVTonePlayerUnit.swift */; };
 		2FD968E720F55DAD00379407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD968E620F55DAD00379407 /* AppDelegate.swift */; };
 		2FD968E920F55DAD00379407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD968E820F55DAD00379407 /* ViewController.swift */; };
 		2FD968EC20F55DAD00379407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD968EA20F55DAD00379407 /* Main.storyboard */; };
@@ -32,10 +34,6 @@
 		2FD968F120F55DAF00379407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD968EF20F55DAF00379407 /* LaunchScreen.storyboard */; };
 		2FD968F920F6D00000379407 /* VoicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD968F820F6D00000379407 /* VoicesTableViewController.swift */; };
 		2FD968FC20F6DA7800379407 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD968FB20F6DA7800379407 /* AVFoundation.framework */; };
-		2FD9690120F6ECF100379407 /* 1000hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FD968FD20F6ECF100379407 /* 1000hz.wav */; };
-		2FD9690220F6ECF100379407 /* 15000hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FD968FE20F6ECF100379407 /* 15000hz.wav */; };
-		2FD9690320F6ECF100379407 /* 5000hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FD968FF20F6ECF100379407 /* 5000hz.wav */; };
-		2FD9690420F6ECF100379407 /* 10000hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FD9690020F6ECF100379407 /* 10000hz.wav */; };
 		2FD9690820F7BDFD00379407 /* CrackedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9690720F7BDFD00379407 /* CrackedScreen.swift */; };
 		2FD9690A20F7DD0600379407 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9690920F7DD0600379407 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +57,8 @@
 		2FC2EC2B20F96DC500A446DC /* ebs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ebs.mp3; sourceTree = "<group>"; };
 		2FC2EC2C20F96DC500A446DC /* dialup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dialup.mp3; sourceTree = "<group>"; };
 		2FC2EC3920FACDB900A446DC /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		2FC2EC3B20FAED4500A446DC /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		2FC2EC3D20FBA82E00A446DC /* AVTonePlayerUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVTonePlayerUnit.swift; sourceTree = "<group>"; };
 		2FD968E320F55DAD00379407 /* Annoyer Mobile 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Annoyer Mobile 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD968E620F55DAD00379407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FD968E820F55DAD00379407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,10 +68,6 @@
 		2FD968F220F55DAF00379407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FD968F820F6D00000379407 /* VoicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesTableViewController.swift; sourceTree = "<group>"; };
 		2FD968FB20F6DA7800379407 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		2FD968FD20F6ECF100379407 /* 1000hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1000hz.wav; sourceTree = "<group>"; };
-		2FD968FE20F6ECF100379407 /* 15000hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 15000hz.wav; sourceTree = "<group>"; };
-		2FD968FF20F6ECF100379407 /* 5000hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5000hz.wav; sourceTree = "<group>"; };
-		2FD9690020F6ECF100379407 /* 10000hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10000hz.wav; sourceTree = "<group>"; };
 		2FD9690720F7BDFD00379407 /* CrackedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackedScreen.swift; sourceTree = "<group>"; };
 		2FD9690920F7DD0600379407 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +87,7 @@
 		2FD968DA20F55DAD00379407 = {
 			isa = PBXGroup;
 			children = (
+				2FC2EC3D20FBA82E00A446DC /* AVTonePlayerUnit.swift */,
 				2FD968E520F55DAD00379407 /* Annoyer Mobile 2 */,
 				2FD968E420F55DAD00379407 /* Products */,
 				2FD968FA20F6DA7800379407 /* Frameworks */,
@@ -109,10 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				2FD9690720F7BDFD00379407 /* CrackedScreen.swift */,
-				2FD968FD20F6ECF100379407 /* 1000hz.wav */,
-				2FD968FF20F6ECF100379407 /* 5000hz.wav */,
-				2FD9690020F6ECF100379407 /* 10000hz.wav */,
-				2FD968FE20F6ECF100379407 /* 15000hz.wav */,
 				2FC2EC2A20F96DC500A446DC /* alarm-clock.mp3 */,
 				2FC2EC2220F96DC300A446DC /* baby-cry.mp3 */,
 				2FC2EC2420F96DC400A446DC /* birds.mp3 */,
@@ -129,6 +122,7 @@
 				2FD968E820F55DAD00379407 /* ViewController.swift */,
 				2FD968F820F6D00000379407 /* VoicesTableViewController.swift */,
 				2FD968EA20F55DAD00379407 /* Main.storyboard */,
+				2FC2EC3B20FAED4500A446DC /* AboutTableViewController.swift */,
 				2FC2EC1D20F9258600A446DC /* SoundEffect.swift */,
 				2FC2EC1B20F9219900A446DC /* SoundEffectCell.swift */,
 				2FC2EC1920F9057100A446DC /* SoundsTableViewController.swift */,
@@ -211,11 +205,8 @@
 			files = (
 				2FC2EC3020F96DC500A446DC /* birds.mp3 in Resources */,
 				2FD968F120F55DAF00379407 /* LaunchScreen.storyboard in Resources */,
-				2FD9690220F6ECF100379407 /* 15000hz.wav in Resources */,
-				2FD9690120F6ECF100379407 /* 1000hz.wav in Resources */,
 				2FC2EC2D20F96DC500A446DC /* car-alarm.mp3 in Resources */,
 				2FC2EC3220F96DC500A446DC /* goat.mp3 in Resources */,
-				2FD9690320F6ECF100379407 /* 5000hz.wav in Resources */,
 				2FC2EC3620F96DC500A446DC /* alarm-clock.mp3 in Resources */,
 				2FC2EC3120F96DC500A446DC /* wtf.mp3 in Resources */,
 				2FC2EC3720F96DC500A446DC /* ebs.mp3 in Resources */,
@@ -225,7 +216,6 @@
 				2FC2EC3320F96DC500A446DC /* nails-chalkboard.mp3 in Resources */,
 				2FC2EC3420F96DC500A446DC /* dog-bark.mp3 in Resources */,
 				2FC2EC2E20F96DC500A446DC /* baby-cry.mp3 in Resources */,
-				2FD9690420F6ECF100379407 /* 10000hz.wav in Resources */,
 				2FD968EE20F55DAF00379407 /* Assets.xcassets in Resources */,
 				2FD968EC20F55DAD00379407 /* Main.storyboard in Resources */,
 			);
@@ -243,12 +233,14 @@
 				2FC2EC3A20FACDB900A446DC /* LaunchScreen.swift in Sources */,
 				2FD968F920F6D00000379407 /* VoicesTableViewController.swift in Sources */,
 				2FD968E720F55DAD00379407 /* AppDelegate.swift in Sources */,
+				2FC2EC3E20FBA82E00A446DC /* AVTonePlayerUnit.swift in Sources */,
 				2FC2EC1A20F9057100A446DC /* SoundsTableViewController.swift in Sources */,
 				2FD9690A20F7DD0600379407 /* SettingsViewController.swift in Sources */,
 				2FC2EC1C20F9219900A446DC /* SoundEffectCell.swift in Sources */,
 				2FC2EC2020F9630D00A446DC /* SoundData.swift in Sources */,
 				2FD9690820F7BDFD00379407 /* CrackedScreen.swift in Sources */,
 				2FC2EC1E20F9258600A446DC /* SoundEffect.swift in Sources */,
+				2FC2EC3C20FAED4500A446DC /* AboutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
