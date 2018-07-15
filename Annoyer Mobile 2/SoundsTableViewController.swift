@@ -74,6 +74,7 @@ extension SoundsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // User clicked on cell...
+        Sound.stop(file: soundeffects[indexPath.row].sound)
         print("PlaySound: \(soundeffects[indexPath.row].sound)")
         if (!playSound(file: soundeffects[indexPath.row].sound)) {
             print("Failed to play sound")
