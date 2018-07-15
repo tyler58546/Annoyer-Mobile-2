@@ -84,9 +84,24 @@ class ViewController: UITableViewController {
         }
     }
     @IBAction func freqSlider_valueChanged(_ sender: Any) {
-        freqLabel.text = "\(Int(freqSlider.value))hz"
+        let freq = 440.0 * pow(2.0, Double(freqSlider.value))
+        var labelText = Int(freq)
+        if labelText == 19999 {
+            labelText = 20000
+        }
+        freqLabel.text = "\( String(labelText) )hz"
         
-        tone.frequency = Double(Int(freqSlider.value))
+        tone.frequency = freq
+    }
+    @IBAction func armSwitch_valueChanged(_ sender: Any) {
+        if !armSwitch.isOn {
+            if tone.isPlaying {
+                engine.mainMixerNode.volume = 0.0
+                tone.stop()
+                engine.reset()
+                freqButtonLabel.text = "Play Frequency"
+            }
+        }
     }
     
     
