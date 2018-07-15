@@ -13,20 +13,9 @@ class SoundsTableViewController: UITableViewController {
 
     let notification = NotificationCenter.default
     var soundeffects = SoundData.generateSoundData()
-    var soundPlayer:AVAudioPlayer!
     
     func playSound(file: String) -> Bool {
-        let path = Bundle.main.path(forResource: file, ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url)
-            soundPlayer = sound
-            sound.play()
-        } catch {
-            // couldn't load file :(
-            return false
-        }
+        Sound.play(file: file)
         return true
     }
     @IBAction func stopSounds(_ sender: Any) {
@@ -35,11 +24,7 @@ class SoundsTableViewController: UITableViewController {
         notification.post(name: Notification.Name("StopSounds_1"), object: nil)
     }
     @objc func stopAllSounds() {
-        if let soundplayer = soundPlayer {
-            if soundplayer.isPlaying {
-                soundplayer.stop()
-            }
-        }
+        Sound.stopAll()
     }
     
     override func viewDidLoad() {

@@ -11,7 +11,6 @@ import AVFoundation
 
 class ViewController: UITableViewController {
 
-    var tonePlayer: AVAudioPlayer!
     var tone: AVTonePlayerUnit!
     var engine: AVAudioEngine!
     var synthesizer = AVSpeechSynthesizer()
@@ -44,20 +43,6 @@ class ViewController: UITableViewController {
             return true
         }
         return false
-    }
-    func playSound(file: String) -> Bool {
-        let path = Bundle.main.path(forResource: file, ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url)
-            tonePlayer = sound
-            sound.play()
-        } catch {
-            // couldn't load file :(
-            return false
-        }
-        return true
     }
     func readSettings() {
         let defaults = UserDefaults.standard

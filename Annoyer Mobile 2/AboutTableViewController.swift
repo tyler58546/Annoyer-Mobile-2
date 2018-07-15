@@ -28,9 +28,6 @@ class AboutTableViewController: UITableViewController {
         if section == 0 {
             return "Annoyer v\(version) (\(build))\nCopyright © 2018 Tyler Knox"
         }
-        if section == 1 {
-            return "\nIcons by Icons8.com"
-        }
         return nil
     }
     
