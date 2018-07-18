@@ -662,7 +662,7 @@ SOFTWARE.</mutableString>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="TopLeft" insetsLayoutMarginsFromSafeArea="NO" text="Sound Effect Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Ia3-ow-8TT">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="TopLeft" insetsLayoutMarginsFromSafeArea="NO" text="Sound Effect Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.34999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Ia3-ow-8TT">
                                             <rect key="frame" x="108" y="19" width="251" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="DCt-Zl-c0A"/>
