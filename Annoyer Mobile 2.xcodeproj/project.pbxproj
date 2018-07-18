@@ -86,6 +86,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4FBE7220FEC6CE001BFF02 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FD9690920F7DD0600379407 /* SettingsViewController.swift */,
+				2FC2EC3B20FAED4500A446DC /* AboutTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		2FB2F4CD20FEC58A0058921E /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				2FC2EC1920F9057100A446DC /* SoundsTableViewController.swift */,
+				2FC2EC1F20F9630D00A446DC /* SoundData.swift */,
+				2FC2EC1B20F9219900A446DC /* SoundEffectCell.swift */,
+				2FC2EC1D20F9258600A446DC /* SoundEffect.swift */,
+				2FC2EC3F20FBB26D00A446DC /* SwiftySound.swift */,
+				2FC2EC2A20F96DC500A446DC /* alarm-clock.mp3 */,
+				2FC2EC2220F96DC300A446DC /* baby-cry.mp3 */,
+				2FC2EC2420F96DC400A446DC /* birds.mp3 */,
+				2FC2EC2120F96DC300A446DC /* car-alarm.mp3 */,
+				2FC2EC2C20F96DC500A446DC /* dialup.mp3 */,
+				2FC2EC2820F96DC400A446DC /* dog-bark.mp3 */,
+				2FC2EC2B20F96DC500A446DC /* ebs.mp3 */,
+				2FC2EC2320F96DC400A446DC /* fork-glass.mp3 */,
+				2FC2EC2620F96DC400A446DC /* goat.mp3 */,
+				2FC2EC2720F96DC400A446DC /* nails-chalkboard.mp3 */,
+				2FC2EC2920F96DC400A446DC /* siren.mp3 */,
+				2FC2EC2520F96DC400A446DC /* wtf.mp3 */,
+			);
+			name = SoundEffects;
+			sourceTree = "<group>";
+		};
+		2FB2F4CF20FEC5DF0058921E /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				2FD968EF20F55DAF00379407 /* LaunchScreen.storyboard */,
+				2FC2EC3920FACDB900A446DC /* LaunchScreen.swift */,
+				2FC2EC3D20FBA82E00A446DC /* AVTonePlayerUnit.swift */,
+				2FD968E820F55DAD00379407 /* ViewController.swift */,
+				2FD968F820F6D00000379407 /* VoicesTableViewController.swift */,
+			);
+			name = MainPage;
+			sourceTree = "<group>";
+		};
+		2FB2F4D020FEC6690058921E /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				2FC2EC1720F83DDF00A446DC /* ExtrasViewController.swift */,
+				2FD9690720F7BDFD00379407 /* CrackedScreen.swift */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
 		2FD968DA20F55DAD00379407 = {
 			isa = PBXGroup;
 			children = (
@@ -106,35 +160,13 @@
 		2FD968E520F55DAD00379407 /* Annoyer Mobile 2 */ = {
 			isa = PBXGroup;
 			children = (
-				2FD9690720F7BDFD00379407 /* CrackedScreen.swift */,
-				2FC2EC3D20FBA82E00A446DC /* AVTonePlayerUnit.swift */,
-				2FC2EC2A20F96DC500A446DC /* alarm-clock.mp3 */,
-				2FC2EC2220F96DC300A446DC /* baby-cry.mp3 */,
-				2FC2EC2420F96DC400A446DC /* birds.mp3 */,
-				2FC2EC2120F96DC300A446DC /* car-alarm.mp3 */,
-				2FC2EC2C20F96DC500A446DC /* dialup.mp3 */,
-				2FC2EC2820F96DC400A446DC /* dog-bark.mp3 */,
-				2FC2EC2B20F96DC500A446DC /* ebs.mp3 */,
-				2FC2EC2320F96DC400A446DC /* fork-glass.mp3 */,
-				2FC2EC2620F96DC400A446DC /* goat.mp3 */,
-				2FC2EC2720F96DC400A446DC /* nails-chalkboard.mp3 */,
-				2FC2EC2920F96DC400A446DC /* siren.mp3 */,
-				2FC2EC2520F96DC400A446DC /* wtf.mp3 */,
-				2FD968E620F55DAD00379407 /* AppDelegate.swift */,
-				2FD968E820F55DAD00379407 /* ViewController.swift */,
-				2FD968F820F6D00000379407 /* VoicesTableViewController.swift */,
 				2FD968EA20F55DAD00379407 /* Main.storyboard */,
-				2FC2EC3F20FBB26D00A446DC /* SwiftySound.swift */,
-				2FC2EC3B20FAED4500A446DC /* AboutTableViewController.swift */,
-				2FC2EC1D20F9258600A446DC /* SoundEffect.swift */,
-				2FC2EC1B20F9219900A446DC /* SoundEffectCell.swift */,
-				2FC2EC1920F9057100A446DC /* SoundsTableViewController.swift */,
-				2FC2EC1F20F9630D00A446DC /* SoundData.swift */,
-				2FC2EC1720F83DDF00A446DC /* ExtrasViewController.swift */,
-				2FD9690920F7DD0600379407 /* SettingsViewController.swift */,
+				2FD968E620F55DAD00379407 /* AppDelegate.swift */,
+				2FB2F4CF20FEC5DF0058921E /* MainPage */,
+				2FB2F4CD20FEC58A0058921E /* SoundEffects */,
+				2FB2F4D020FEC6690058921E /* Extras */,
+				2F4FBE7220FEC6CE001BFF02 /* Settings */,
 				2FD968ED20F55DAF00379407 /* Assets.xcassets */,
-				2FD968EF20F55DAF00379407 /* LaunchScreen.storyboard */,
-				2FC2EC3920FACDB900A446DC /* LaunchScreen.swift */,
 				2FD968F220F55DAF00379407 /* Info.plist */,
 			);
 			path = "Annoyer Mobile 2";
@@ -388,7 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8D46U62W6;
 				INFOPLIST_FILE = "Annoyer Mobile 2/Info.plist";
@@ -409,7 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8D46U62W6;
 				INFOPLIST_FILE = "Annoyer Mobile 2/Info.plist";
